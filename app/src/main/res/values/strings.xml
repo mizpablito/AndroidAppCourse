@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginPage</string>
+    <string name="text_email">Email</string>
+    <string name="text_passowrd">Password</string>
+    <string name="text_button_login">Login</string>
+    <string name="title_activity_private">PrivateActivity</string>
+</resources>
