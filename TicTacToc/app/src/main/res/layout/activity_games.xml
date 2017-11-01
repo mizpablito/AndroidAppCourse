@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.dpriv.tictactoc.GamesActivity">
+
+    <TextView
+        android:id="@+id/textViewNowPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Teraz gra: "
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/cell1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewNowPlay"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cell1"
+        android:layout_centerHorizontal="true"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/cell2"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell1"
+        android:layout_alignStart="@+id/cell1"
+        android:layout_alignTop="@+id/cell5"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell2"
+        android:layout_alignStart="@+id/cell2"
+        android:layout_below="@+id/cell2"
+        android:layout_marginTop="13dp"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell3"
+        android:layout_alignStart="@+id/cell3"
+        android:layout_alignTop="@+id/cell5"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell4"
+        android:layout_alignStart="@+id/cell4"
+        android:layout_below="@+id/cell4"
+        android:layout_marginTop="14dp"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell5"
+        android:layout_alignStart="@+id/cell5"
+        android:layout_alignTop="@+id/cell7"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+
+    <ImageView
+        android:id="@+id/cell9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cell6"
+        android:layout_alignStart="@+id/cell6"
+        android:layout_alignTop="@+id/cell8"
+        android:onClick="cellClick"
+        app:srcCompat="@drawable/ic_empty" />
+</RelativeLayout>
