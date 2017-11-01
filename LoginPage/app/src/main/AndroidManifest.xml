@@ -21,7 +21,7 @@
         <activity
             android:name=".PrivateActivity"
             android:label="@string/title_activity_private"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

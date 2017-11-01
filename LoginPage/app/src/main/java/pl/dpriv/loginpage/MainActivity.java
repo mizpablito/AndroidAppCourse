@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
                     this,
                     "Me data this: \nEmail: " + e + "\n Password: " + p,
                     Toast.LENGTH_LONG).show();*/
-            Intent intentPrivateScreen = new Intent();
+            Intent i = new Intent(this, PrivateActivity.class);
+
+            i.putExtra("userEmail", e);
+            i.putExtra("userAge", 20);
+
+            startActivity(i);
         }
         else
         {
