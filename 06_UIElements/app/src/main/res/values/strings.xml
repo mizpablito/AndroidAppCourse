@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">06_UIElements</string>
+    <string name="select_your_hobbies">Select your hobbies</string>
+    <string name="videogames">VideoGames</string>
+    <string name="films">Films</string>
+    <string name="sports">Sports</string>
+</resources>
