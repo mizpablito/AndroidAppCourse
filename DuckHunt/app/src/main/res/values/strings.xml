@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DuckHunt Game</string>
+    <string name="button_start_game">Start Game!</string>
+    <string name="editText_you_name">You name</string>
+    <string name="info_write_nick">Write a nick</string>
+    <string name="error_req_nick">Nick required</string>
+    <string name="info_kill_duck">Kill all duck</string>
+    <string name="prefix_win_point">You earned</string>
+    <string name="sufix_win_point">points</string>
+</resources>

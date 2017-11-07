@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gra DuckHunt</string>
+    <string name="button_start_game">Rozpocznij grę!</string>
+    <string name="editText_you_name">Twoja nazwa</string>
+    <string name="info_write_nick">Wprowadź nazwę gracza</string>
+    <string name="error_req_nick">Nick wymagany</string>
+    <string name="info_kill_duck">Zastrzel wszystkie kaczki</string>
+    <string name="prefix_win_point">Zdobyto</string>
+    <string name="sufix_win_point">punktów</string>
+</resources>

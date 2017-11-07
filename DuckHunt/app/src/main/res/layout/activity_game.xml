@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game"
+    tools:context="pl.dpriv.duckhunt.GameActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_access_time_black_24dp" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="60s"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewClock"
+        app:layout_constraintTop_toTopOf="@+id/imageViewClock" />
+
+    <TextView
+        android:id="@+id/textViewNickWin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="NICK"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPoints"
+        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewTime" />
+
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewKillDuck"
+        app:layout_constraintTop_toTopOf="@+id/textViewNickWin" />
+
+    <ImageView
+        android:id="@+id/imageViewDuck"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:onClick="killDuck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNickWin"
+        app:srcCompat="@drawable/duck" />
+
+    <ImageView
+        android:id="@+id/imageViewKillDuck"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPoints"
+        app:srcCompat="@drawable/duck_hunt_logo" />
+</android.support.constraint.ConstraintLayout>
