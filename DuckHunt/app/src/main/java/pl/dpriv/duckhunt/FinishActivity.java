@@ -21,8 +21,8 @@ public class FinishActivity extends AppCompatActivity {
         point = findViewById(R.id.textViewPointWin);
 
         nick.setText(extras.getString("nick"));
-        point.setText(getString(R.string.prefix_win_point)
-                + extras.getInt("point")
+        point.setText(getString(R.string.prefix_win_point) + " "
+                + extras.getInt("point") + " "
                 + getString(R.string.sufix_win_point));
     }
 }
