@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_awaria"
+        android:icon="@drawable/ic_mood_bad_black_24dp"
+        android:title="Awaria" />
+
+    <item
+        android:id="@+id/navigation_mechanik"
+        android:icon="@drawable/ic_build_black_24dp"
+        android:title="Mechanicy" />
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Profil" />
+
+</menu>
