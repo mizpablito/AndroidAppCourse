@@ -8,4 +8,6 @@
     <string name="info_kill_duck">Zastrzel wszystkie kaczki</string>
     <string name="prefix_win_point">Zdobyto</string>
     <string name="sufix_win_point">punktów</string>
+    <string name="dialog_title">Koniec gry!</string>
+    <string name="dialog_message">Czas się skończył!</string>
 </resources>

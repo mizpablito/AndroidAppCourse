@@ -1,8 +1,10 @@
 package pl.dpriv.duckhunt;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Parcelable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -26,7 +28,7 @@ public class GameActivity extends AppCompatActivity {
         //hide actionBar
         getSupportActionBar().hide();
 
-        final Intent i = new Intent(this, FinishActivity.class);
+        //final Intent i = new Intent(this, FinishActivity.class);
 
         final Bundle extras = getIntent().getExtras();
 
@@ -39,6 +41,11 @@ public class GameActivity extends AppCompatActivity {
 
         nick.setText(extras.getString("nick"));
 
+        startCountDown();
+
+    }
+
+    private void startCountDown() {
         new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -48,14 +55,42 @@ public class GameActivity extends AppCompatActivity {
             public void onFinish() {
                 //time.setText("done!");
 
-                i.putExtra("nick", extras.getString("nick"));
-                i.putExtra("point", counter);
+                // i.putExtra("nick", extras.getString("nick"));
+                // i.putExtra("point", counter);
 
-                startActivity(i);
+                // startActivity(i);
+                showGameOverDialog();
 
             }
         }.start();
+    }
 
+    private void showGameOverDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.dialog_message)
+                .setTitle(R.string.dialog_title)
+                .setCancelable(false);
+        builder.setPositiveButton("Restart Game", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+//                Intent intent = getIntent();
+//                finish();
+//                startActivity(intent);
+
+                counter = 0;
+                moveDuck();
+                startCountDown();
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton("End game", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //to destroy the GameActivity
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+
+        dialog.show();
     }
 
     public void killDuck(View view) {

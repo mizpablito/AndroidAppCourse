@@ -7,4 +7,6 @@
     <string name="info_kill_duck">Kill all duck</string>
     <string name="prefix_win_point">You earned</string>
     <string name="sufix_win_point">points</string>
+    <string name="dialog_title">Koniec gry!</string>
+    <string name="dialog_message">Czas się skończył!</string>
 </resources>
