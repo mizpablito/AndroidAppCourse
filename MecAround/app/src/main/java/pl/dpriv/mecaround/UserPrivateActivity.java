@@ -1,16 +1,19 @@
 package pl.dpriv.mecaround;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class UserPrivateActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+    String serverKey;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,7 +33,7 @@ public class UserPrivateActivity extends AppCompatActivity {
 
                     return true;
             }
-            
+
             if(f!=null){
                 getSupportFragmentManager()
                         .beginTransaction()
@@ -47,7 +50,10 @@ public class UserPrivateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_private);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        Bundle extras = getIntent().getExtras();
+
+        serverKey = extras.getString("key");
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -55,6 +61,27 @@ public class UserPrivateActivity extends AppCompatActivity {
                 .beginTransaction()
                 .add(R.id.fragment_cointainer, new AwariaItemFragment())
                 .commit();
+
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.maps_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_show_map:
+                //newGame();
+                Intent i = new Intent(this, MapsActivity.class);
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }
