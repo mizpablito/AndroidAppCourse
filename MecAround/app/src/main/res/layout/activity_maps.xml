@@ -8,4 +8,5 @@
     map:cameraZoom="16"
     map:mapType="satellite"
     map:uiCompass="true"
+    
     tools:context="pl.dpriv.mecaround.MapsActivity" />
